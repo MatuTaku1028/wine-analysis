@@ -13,7 +13,7 @@ cov_matrix = np.cov(X_scaled, rowvar=False)
 eigenvalues, eigenvectors = np.linalg.eigh(cov_matrix)
 order = np.argsort(eigenvalues)[::-1]
 eigenvalues  = eigenvalues[order]
-8
+
 eigenvectors = eigenvectors[:, order]
 # 主成分スコアを計算
 PC_scores = X_scaled @ eigenvectors
